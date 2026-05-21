@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Things I Notice About You 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#070b1a;
+color:white;
+overflow-x:hidden;
+min-height:100vh;
+padding:30px 15px;
+position:relative;
+}
+
+/* stars */
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-1;
+}
+
+.star{
+position:absolute;
+background:white;
+border-radius:50%;
+opacity:0.7;
+animation:twinkle linear infinite;
+}
+
+@keyframes twinkle{
+0%,100%{
+opacity:0.2;
+transform:scale(1);
+}
+50%{
+opacity:1;
+transform:scale(1.7);
+}
+}
+
+/* floating hearts */
+
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:18px;
+animation:rise linear forwards;
+pointer-events:none;
+z-index:1;
+}
+
+@keyframes rise{
+0%{
+transform:translateY(0) scale(1);
+opacity:0.8;
+}
+100%{
+transform:translateY(-110vh) scale(1.8);
+opacity:0;
+}
+}
+
+/* container */
+
+.container{
+max-width:860px;
+margin:auto;
+position:relative;
+z-index:2;
+}
+
+/* hero */
+
+.hero{
+padding:50px 25px;
+text-align:center;
+border-radius:32px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(14px);
+border:1px solid rgba(255,255,255,0.08);
+box-shadow:0 10px 40px rgba(0,0,0,0.45);
+margin-bottom:35px;
+}
+
+.day{
+letter-spacing:5px;
+font-size:0.85rem;
+opacity:0.7;
+margin-bottom:15px;
+}
+
+h1{
+font-size:clamp(2.6rem,8vw,4.4rem);
+line-height:1.2;
+margin-bottom:18px;
+
+background:linear-gradient(to right,#ffb6c1,#ffd6e7,#ffffff);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.subtitle{
+line-height:2;
+opacity:0.9;
+max-width:680px;
+margin:auto;
+font-size:1rem;
+}
+
+/* cards */
+
+.card{
+margin-top:28px;
+padding:28px;
+border-radius:28px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.08);
+transition:0.4s;
+cursor:pointer;
+overflow:hidden;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-6px);
+background:rgba(255,255,255,0.08);
+}
+
+.card-title{
+font-size:1.25rem;
+margin-bottom:16px;
+color:#ffd6e7;
+}
+
+.card-text{
+line-height:2;
+font-size:0.97rem;
+opacity:0.93;
+}
+
+/* reveal section */
+
+.reveal-btn{
+margin-top:40px;
+text-align:center;
+}
+
+button{
+padding:15px 32px;
+border:none;
+border-radius:40px;
+background:linear-gradient(135deg,#ff758c,#ff7eb3);
+color:white;
+font-size:1rem;
+font-weight:600;
+cursor:pointer;
+transition:0.4s;
+box-shadow:0 8px 25px rgba(255,118,136,0.35);
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.final-message{
+margin-top:35px;
+padding:30px;
+border-radius:28px;
+background:rgba(255,255,255,0.05);
+line-height:2.2;
+font-size:0.97rem;
+opacity:0;
+transform:translateY(20px);
+transition:1s;
+display:none;
+white-space:normal;
+overflow-wrap:break-word;
+word-break:break-word;
+}
+
+/* footer */
+
+.footer{
+margin-top:35px;
+text-align:center;
+opacity:0.7;
+line-height:1.8;
+font-size:0.9rem;
+}
+
+/* mobile */
+
+@media(max-width:600px){
+
+.hero,
+.card,
+.final-message{
+padding:24px 18px;
+}
+
+.subtitle,
+.card-text,
+.final-message{
+font-size:0.92rem;
+line-height:1.9;
+}
+
+button{
+width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="day">
+DAY 5 / 10
+</div>
+
+<h1>
+Things I Notice<br>
+About You 💖
+</h1>
+
+<p class="subtitle">
+You probably don't even realize how many tiny things about you stay in my mind.
+
+But I notice them.
+
+Always.
+</p>
+
+</div>
+
+<!-- CARD 1 -->
+
+<div class="card">
+
+<div class="card-title">
+🌙 The Way You Text When Sleepy
+</div>
+
+<div class="card-text">
+Your messages become softer.
+
+More random.
+
+Sometimes half words.
+
+Sometimes unnecessary honesty.
+
+And somehow that becomes the cutest version of you.
+
+It's like your heart starts texting before your brain does.
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="card">
+
+<div class="card-title">
+💭 When You Overthink
+</div>
+
+<div class="card-text">
+You try acting normal first.
+
+But your energy changes slightly.
+
+Your replies become slower.
+
+Your words become smaller.
+
+And I immediately know something is wrong.
+
+I don't know how.
+
+I just feel it.
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="card">
+
+<div class="card-title">
+💕 Your Possessiveness
+</div>
+
+<div class="card-text">
+You act annoyed first.
+
+Loving later.
+
+And honestly?
+
+It's adorable.
+
+Because underneath all that attitude is someone who just loves deeply and fears losing what matters to her.
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="card">
+
+<div class="card-title">
+🎧 Your Voice
+</div>
+
+<div class="card-text">
+It's actually unfair.
+
+Because somehow one “hello” from you changes my entire mood.
+
+One call from you can fix a day that was going horribly.
+
+I don't think you realize how much comfort your voice carries.
+</div>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="card">
+
+<div class="card-title">
+🫀 The Way You Care
+</div>
+
+<div class="card-text">
+You don't even realize how naturally you make people feel safe.
+
+The way you ask things.
+
+The way you remember tiny details.
+
+The way your softness appears when someone needs it.
+
+You carry warmth so naturally.
+</div>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="card">
+
+<div class="card-title">
+✨ Things You Don't Know You Do To Me
+</div>
+
+<div class="card-text">
+You make me reread chats.
+
+You make songs hit differently.
+
+You make random places remind me of you.
+
+You make me smile at my screen like an idiot.
+
+And somehow...
+
+you make the future feel less scary.
+</div>
+
+</div>
+
+<!-- BUTTON -->
+
+<div class="reveal-btn">
+
+<button onclick="showMessage()">
+One More Thing About You ❤️
+</button>
+
+</div>
+
+<!-- FINAL MESSAGE -->
+
+<div class="final-message" id="finalMessage">
+
+You know what I think is the most beautiful thing about you?
+
+Not just your smile.
+
+Not your looks.
+
+Not even the way you love.
+
+<br><br>
+
+It's the fact that your presence changes people emotionally.
+
+Especially me.
+
+<br><br>
+
+Before you,
+days were just days.
+
+Now tiny things matter more.
+
+Songs feel deeper.
+
+Late nights feel softer.
+
+Birthdays feel exciting.
+
+Future feels warmer.
+
+<br><br>
+
+And maybe that's why I pay attention to these little details about you.
+
+Because loving someone deeply makes even the smallest things feel important.
+
+The way you type.
+
+The way you get jealous.
+
+The way you become quiet.
+
+The way you suddenly become extra soft.
+
+The way you care without even realizing it.
+
+<br><br>
+
+I notice all of it, baby.
+
+All of it.
+
+And I think I always will.
+
+<br><br>
+
+Because somewhere between all these tiny moments...
+
+you quietly became my favorite person.
+
+❤️
+
+</div>
+
+<div class="footer">
+
+for GK 🤍
+
+“love is sometimes just noticing little things forever.”
+
+</div>
+
+</div>
+
+<script>
+
+/* stars */
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<160;i++){
+
+const star=document.createElement("div");
+
+star.classList.add("star");
+
+const size=Math.random()*3;
+
+star.style.width=size+"px";
+star.style.height=size+"px";
+
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDuration=(Math.random()*4+2)+"s";
+
+stars.appendChild(star);
+
+}
+
+/* hearts */
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.classList.add("heart");
+
+heart.innerHTML="❤";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+4)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(createHeart,450);
+
+/* reveal message */
+
+function showMessage(){
+
+const msg=document.getElementById("finalMessage");
+
+msg.style.display="block";
+
+requestAnimationFrame(()=>{
+
+msg.style.opacity="1";
+
+msg.style.transform="translateY(0px)";
+
+window.scrollTo({
+top:msg.offsetTop - 20,
+behavior:"smooth"
+});
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
